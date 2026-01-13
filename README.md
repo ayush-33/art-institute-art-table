@@ -1,9 +1,11 @@
 # Art Institute Art Table
 
-## Description
-This project is a React + TypeScript application that displays artwork data from the Art Institute of Chicago API using a data table.
+## Overview
+This project is a React application built using TypeScript and Vite. It displays artwork data from the Art Institute of Chicago API in a tabular format.
 
-The application uses server-side pagination and supports persistent row selection across pages.
+The application focuses on implementing server-side pagination along with persistent row selection across pages, without prefetching or storing data from other pages.
+
+---
 
 ## Tech Stack
 - React
@@ -11,16 +13,28 @@ The application uses server-side pagination and supports persistent row selectio
 - Vite
 - PrimeReact
 
+---
+
 ## Features
-- Server-side pagination using API
-- Data table built with PrimeReact
-- Row selection with checkboxes
-- Persistent selection across pages
+- Server-side pagination using the Art Institute of Chicago API
+- Data table implemented with PrimeReact DataTable
+- Checkbox-based row selection
+- Persistent row selection across page navigation
 - Custom bulk row selection using an overlay panel
+- Selection handled using artwork IDs instead of storing row objects
 - No prefetching of data from other pages
 
-## Project Setup
+---
 
-Install dependencies:
-```bash
-npm install
+## Project Structure
+src/
+├── api/
+│ └── artworks.ts
+├── components/
+│ ├── ArtTable.tsx
+│ └── SelectOverlay.tsx
+├── types/
+│ └── artwork.ts
+├── App.tsx
+├── main.tsx
+└── index.css
